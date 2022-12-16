@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open Data Lab</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:00px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <div class="w3-container">
+    <h1><b>GCK OPEN DATA LAB</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+    </div>
+    </div>
+  </header>
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>Plots</b></h4><br>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img id="myImg1" src="agriculture.jpg"  style="width:100%" class="w3-hover-opacity">
+        <div id="myModal1" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img id="myImg2" src="Agri.jpg"  style="width:100%" class="w3-hover-opacity">
+        <div id="myModal2" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img02">
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img id="myImg3" src="Agri2.jpg"  style="width:100%" class="w3-hover-opacity">
+        <div id="myModal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img03">
+      </div>
+    </div>
+      <script>
+        // Get the modal
+        var modal1 = document.getElementById("myModal1");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img1 = document.getElementById("myImg1");
+        var modalImg1 = document.getElementById("img01");
+        img1.onclick = function(){
+          modal1.style.display = "block";
+          modalImg1.src = this.src;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span1 = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function() { 
+          modal1.style.display = "none";
+        }
+
+        var modal2 = document.getElementById("myModal2");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img2 = document.getElementById("myImg2");
+        var modalImg2 = document.getElementById("img02");
+        var captionText2 = document.getElementById("caption2");
+        img2.onclick = function(){
+          modal2.style.display = "block";
+          modalImg2.src = this.src;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span2 = document.getElementsByClassName("close")[1];
+        
+        // When the user clicks on <span> (x), close the modal
+        span2.onclick = function() { 
+          modal2.style.display = "none";
+        }
+
+        var modal3 = document.getElementById("myModal3");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img3 = document.getElementById("myImg3");
+        var modalImg3 = document.getElementById("img03");
+        var captionText3 = document.getElementById("caption3");
+        img3.onclick = function(){
+          modal3.style.display = "block";
+          modalImg3.src = this.src;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span3 = document.getElementsByClassName("close")[2];
+        
+        // When the user clicks on <span> (x), close the modal
+        span3.onclick = function() { 
+          modal3.style.display = "none";
+        }
+
+        </script>
+      <br>
+      <div class="w3-container w3-padding-large" style="margin-bottom:32px"></div>
+      <center><a href="Agriculture.xlsx" download="Agriculture Data">
+      <button type="button">Download Data</button>
+      </a></center>
+    <hr>
+  
+<!-- End page content -->
+</div>
+
+</body>
+</html>
